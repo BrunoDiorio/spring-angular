@@ -1,0 +1,17 @@
+download
+npm     ->      https://www.npmjs.com/get-npm
+angular ->      https://cli.angular.io/
+
+dentro da pasta src/main/recources:
+##cria estrutura do angular
+\tasks\src\main\resources>ng new frontend
+
+## inicia angular
+\tasks\src\main\resources>ng serve
+
+## cria componente "tasks"
+\tasks\src\main\resources\frontend>ng generate component tasks
+
+## cria sub-componentes de "tasks"
+\tasks\src\main\resources\frontend>ng generate component /tasks/tasks-add
+\tasks\src\main\resources\frontend>ng generate component /tasks/tasks-list
