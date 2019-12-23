@@ -15,3 +15,17 @@ dentro da pasta src/main/recources:
 ## cria sub-componentes de "tasks"
 \tasks\src\main\resources\frontend>ng generate component /tasks/tasks-add
 \tasks\src\main\resources\frontend>ng generate component /tasks/tasks-list
+
+## add bootstrap
+\tasks\src\main\resources\frontend>npm install --save bootstrap
+
+## add bootstrap ao angular
+ir ate angular.jason e adicionar o path do css ao arquivo em "styles"
+
+##
+adcionar services no arquivo app.module.ts
+  providers: [TaskService],
+
+
+##criar arquivo proxy.json para mapear requisições para localhost
+##alterar package.json alterar ng serve

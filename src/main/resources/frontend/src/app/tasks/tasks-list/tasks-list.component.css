@@ -1,0 +1,6 @@
+li:nth-child(odd) {
+    background: #F0F0F0;
+}
+li:hover{
+    background: aliceblue;
+}
