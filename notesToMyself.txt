@@ -29,3 +29,10 @@ adcionar services no arquivo app.module.ts
 
 ##criar arquivo proxy.json para mapear requisições para localhost
 ##alterar package.json alterar ng serve
+
+
+##configurar script postBuild para compilar arquivos do frontend e disponibilizar na pasta do springboot
+##instalar rimraf
+npm install --save-dev rimraf
+npm install --save-dev mkdirp
+npm install --save-dev copyfiles

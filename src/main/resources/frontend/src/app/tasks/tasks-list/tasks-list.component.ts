@@ -17,12 +17,16 @@ export class TasksListComponent implements OnInit {
 
     ngOnInit() {
         // this.tasks.push(new Task(1,"Task1", true, "01/12/2019"));
-        return this.taskService.getTasks()
+        this.taskService.getTasks()
             .subscribe(
                 (tasks: any[]) =>{
                     this.tasks = tasks;
                 },
                 (error) => console.log(error));
+
+        this.taskService.onTaskAdded.subscribe(
+            (task: Task) => this.tasks.push(task)
+        );
     }
 
     getDueDateLabel(task: Task){
@@ -30,8 +34,7 @@ export class TasksListComponent implements OnInit {
     }
 
     onTaskChange(event, task: Task){
-        task.completed = !task.completed;
-        console.log(task);
+        task.completed = event.target.checked;
+        this.taskService.saveTask(task).subscribe();
     }
-
 }
